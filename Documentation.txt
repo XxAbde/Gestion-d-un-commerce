@@ -1,0 +1,68 @@
+* : degrée d'importance .
+
+Ce code est un exemple de système de gestion de commerce en C. Il utilise des structures pour représenter les produits, les clients, les fournisseurs et les transactions de ventes. Voici une documentation détaillée du code :
+Structures Utilisées :
+
+    produit : Contient les détails d'un produit, y compris le nom, le prix et l'identifiant.
+        char nom[50] : Nom du produit.
+        float prix : Prix du produit.
+        int id : Identifiant unique du produit.
+
+    client : Représente un client avec un identifiant, un nom, une adresse et un numéro de téléphone.
+        int id : Identifiant unique du client.
+        char nom[50] : Nom du client.
+        char adresse[100] : Adresse du client.
+        char telephone[20] : Numéro de téléphone du client.
+
+    fournisseur : Similaire à la structure client, mais pour les fournisseurs. Il contient un identifiant, un nom, une adresse et un numéro de téléphone.
+
+    transaction : Représente une transaction de vente avec un produit, une quantité, un prix unitaire et un client associé.
+        struct produit produit : Produit vendu.
+        int quantite : Quantité du produit vendu.
+        float prix_unitaire : Prix unitaire du produit.
+        struct client client : Client effectuant la transaction.
+
+Fonctions Utilisées :
+
+    main() : La fonction principale du programme.
+        Déclare des tableaux pour stocker les produits, les clients, les fournisseurs et les transactions.
+        Affiche un menu principal et gère les choix de l'utilisateur en appelant les fonctions appropriées.
+
+    ajouter_produit() : Ajoute un nouveau produit au tableau des produits.
+        Demande à l'utilisateur d'entrer le nom et le prix du produit.
+        Incrémente le nombre de produits.
+
+    modifier_produit() : Modifie un produit existant dans le tableau des produits.
+        Demande à l'utilisateur d'entrer l'identifiant du produit à modifier, ainsi que le nouveau nom et prix.
+        Recherche le produit par son identifiant et le met à jour.
+
+    supprimer_produit() : Supprime un produit du tableau des produits.
+        Demande à l'utilisateur d'entrer l'identifiant du produit à supprimer.
+        Recherche le produit par son identifiant et le supprime du tableau.
+
+    consulter_produits() : Affiche tous les produits stockés dans le tableau des produits avec leurs détails.
+
+    gestion_produits() : Gère les actions liées à la gestion des produits.
+        Affiche un menu pour ajouter, modifier, supprimer ou consulter des produits.
+        Gère les choix de l'utilisateur en appelant les fonctions correspondantes.
+
+    ajouter_client(), modifier_client(), supprimer_client(), consulter_clients() : Ces fonctions effectuent des opérations similaires à celles des produits, mais pour les clients.
+
+Boucles et Switches :
+
+    - Le programme utilise des boucles infinies pour maintenir le menu principal et les sous-menus actifs jusqu'à ce que l'utilisateur décide de quitter.
+    - Les instructions switch sont utilisées pour diriger le flux du programme en fonction du choix de l'utilisateur dans les menus.
+
+Limitations :
+
+    *** Le code ne traite pas les erreurs d'entrée de l'utilisateur, comme des saisies incorrectes ou des dépassements de capacité des tableaux.
+    *   Il n'y a pas de stockage persistant des données. Toutes les données sont perdues lorsque le programme se termine.
+    *** Certaines fonctionnalités comme la gestion des fournisseurs et les transactions de vente ne sont pas implémentées dans ce code.
+
+Améliorations a réaliser :
+
+    *** Implémenter la gestion des fournisseurs et des transactions de vente.
+    **  Ajouter des validations d'entrée pour éviter les erreurs de saisie.
+    **  Utiliser des structures de données plus dynamiques pour gérer un nombre variable d'éléments.
+    *   Ajouter la possibilité de sauvegarder et de charger les données depuis des fichiers pour rendre le système persistant.
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1712965834 source:c:\users\pc\desktop\gestion d'un commerce\codeproject\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
